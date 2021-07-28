@@ -31,3 +31,6 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
 #amplify-do-not-edit-end
+
+#amplify function
+amplify/backend/function/**/src

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "api": {
+      "amplifyyarnworkspace": [
+        "Mutation"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "secretNames": [
+    "GITHUB_ACCESS_TOKEN"
+  ]
+}

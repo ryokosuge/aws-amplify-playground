@@ -11,7 +11,9 @@
     "amplify:invokePHPLambda": "cd amplify/backend/function/invokePHPLambda && rm -rf src && mkdir -p src && cp package.json src/ && cd src && npm install --production && rm package.json package-lock.json && cd ../ && yarn tsc && cd ../../../../"
   },
   "workspaces": [
-    "frontend"
+    "frontend",
+    "amplify/backend/function/createGitHubActionWorkflowDispatch",
+    "amplify/backend/function/invokePHPLambda"
   ],
   "devDependencies": {
     "eslint": "7.31.0",
