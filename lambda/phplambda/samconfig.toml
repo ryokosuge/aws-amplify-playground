@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "phplambda"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-pr7qb9fcpzin"
+s3_prefix = "phplambda"
+region = "ap-northeast-1"
+profile = "ryokosuge"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["phplambda=573423333442.dkr.ecr.ap-northeast-1.amazonaws.com/phplambda"]
