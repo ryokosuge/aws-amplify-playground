@@ -1,0 +1,15 @@
+{
+  "function": {
+    "createGitHubActionWorkflowDispatch": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": []
+    },
+    "invokePHPLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  }
+}

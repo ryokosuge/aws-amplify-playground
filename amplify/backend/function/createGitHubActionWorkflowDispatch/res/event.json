@@ -1,0 +1,8 @@
+{
+  "arguments": {
+    "owner": "ryokosuge",
+    "repo": "github-actions-workflow-dispatch",
+    "workflowID": "workflow_dispatch_action.yaml",
+    "ref": "main"
+  }
+}

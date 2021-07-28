@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyplayground-dev-170042-authRole",
+      "UnauthRoleArn": "arn:aws:iam::573423333442:role/amplify-amplifyplayground-dev-170042-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::573423333442:role/amplify-amplifyplayground-dev-170042-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-amplifyplayground-dev-170042-deployment",
+      "UnauthRoleName": "amplify-amplifyplayground-dev-170042-unauthRole",
+      "StackName": "amplify-amplifyplayground-dev-170042",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:573423333442:stack/amplify-amplifyplayground-dev-170042/ed505c00-ef79-11eb-aca4-0689d40efb27",
+      "AmplifyAppId": "d3v1wdwyumvuqx"
+    },
+    "categories": {
+      "function": {
+        "createGitHubActionWorkflowDispatch": {
+          "deploymentBucketName": "amplify-amplifyplayground-dev-170042-deployment",
+          "s3Key": "amplify-builds/createGitHubActionWorkflowDispatch-6b525049537778793566-build.zip"
+        },
+        "invokePHPLambda": {
+          "deploymentBucketName": "amplify-amplifyplayground-dev-170042-deployment",
+          "s3Key": "amplify-builds/invokePHPLambda-4b7a4f595073634d646e-build.zip"
+        }
+      }
+    }
+  }
+}
