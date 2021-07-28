@@ -1,5 +1,20 @@
-type Todo @model {
-  id: ID!
-  name: String!
-  description: String
+type Query {
+  createGitHubActionWorkflowDispatch(
+    owner: String!
+    repo: String!
+    workflowID: String!
+    ref: String!
+  ): CreateGitHubActionWorkflowDispatchResponse @function(name: "createGitHubActionWorkflowDispatch-${env}")
+  invokePHPLambda(
+    key: String!
+    value: String!
+  ): InvokePHPLambdaResponse @function(name: "invokePHPLambda-${env}")
+}
+
+type CreateGitHubActionWorkflowDispatchResponse {
+  total_count: Int!
+}
+
+type InvokePHPLambdaResponse {
+  statusCode: Int!
 }

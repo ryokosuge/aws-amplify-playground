@@ -2,32 +2,27 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
-      id
-      name
-      description
-      createdAt
-      updatedAt
+export const createGitHubActionWorkflowDispatch = /* GraphQL */ `
+  query CreateGitHubActionWorkflowDispatch(
+    $owner: String!
+    $repo: String!
+    $workflowID: String!
+    $ref: String!
+  ) {
+    createGitHubActionWorkflowDispatch(
+      owner: $owner
+      repo: $repo
+      workflowID: $workflowID
+      ref: $ref
+    ) {
+      total_count
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        name
-        description
-        createdAt
-        updatedAt
-      }
-      nextToken
+export const invokePHPLambda = /* GraphQL */ `
+  query InvokePHPLambda($key: String!, $value: String!) {
+    invokePHPLambda(key: $key, value: $value) {
+      statusCode
     }
   }
 `;
