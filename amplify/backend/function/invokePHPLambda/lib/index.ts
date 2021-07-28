@@ -18,11 +18,13 @@ type Response = {
 	body: string;
 };
 
+const FUNCTION_NAME = "phplambda-phplambda-b8Zaj2NTPNp9";
+
 export const handler: Handler<EventType<EventValueType>, Response> = async (event, context, callback) => {
 	const lambda = new AWS.Lambda();
 	const payload = JSON.stringify({ queryStringParameters: event.arguments });
 	const value = await lambda.invoke({
-		FunctionName: "phplambda-phplambda-QerFWwIgOT9T",
+		FunctionName: FUNCTION_NAME,
 		InvocationType: "RequestResponse",
 		Payload: payload,
 	}).promise();
