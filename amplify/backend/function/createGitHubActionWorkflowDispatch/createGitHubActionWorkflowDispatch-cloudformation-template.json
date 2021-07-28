@@ -16,17 +16,17 @@
     "s3Key": {
       "Type": "String"
     },
-    "apiamplifyyarnworkspaceGraphQLAPIIdOutput": {
+    "apiamplifyplaygroundGraphQLAPIIdOutput": {
       "Type": "String",
-      "Default": "apiamplifyyarnworkspaceGraphQLAPIIdOutput"
+      "Default": "apiamplifyplaygroundGraphQLAPIIdOutput"
     },
-    "apiamplifyyarnworkspaceGraphQLAPIEndpointOutput": {
+    "apiamplifyplaygroundGraphQLAPIEndpointOutput": {
       "Type": "String",
-      "Default": "apiamplifyyarnworkspaceGraphQLAPIEndpointOutput"
+      "Default": "apiamplifyplaygroundGraphQLAPIEndpointOutput"
     },
-    "apiamplifyyarnworkspaceGraphQLAPIKeyOutput": {
+    "apiamplifyplaygroundGraphQLAPIKeyOutput": {
       "Type": "String",
-      "Default": "apiamplifyyarnworkspaceGraphQLAPIKeyOutput"
+      "Default": "apiamplifyplaygroundGraphQLAPIKeyOutput"
     }
   },
   "Conditions": {
@@ -82,14 +82,14 @@
             "REGION": {
               "Ref": "AWS::Region"
             },
-            "API_AMPLIFYYARNWORKSPACE_GRAPHQLAPIIDOUTPUT": {
-              "Ref": "apiamplifyyarnworkspaceGraphQLAPIIdOutput"
+            "API_AMPLIFYPLAYGROUND_GRAPHQLAPIIDOUTPUT": {
+              "Ref": "apiamplifyplaygroundGraphQLAPIIdOutput"
             },
-            "API_AMPLIFYYARNWORKSPACE_GRAPHQLAPIENDPOINTOUTPUT": {
-              "Ref": "apiamplifyyarnworkspaceGraphQLAPIEndpointOutput"
+            "API_AMPLIFYPLAYGROUND_GRAPHQLAPIENDPOINTOUTPUT": {
+              "Ref": "apiamplifyplaygroundGraphQLAPIEndpointOutput"
             },
-            "API_AMPLIFYYARNWORKSPACE_GRAPHQLAPIKEYOUTPUT": {
-              "Ref": "apiamplifyyarnworkspaceGraphQLAPIKeyOutput"
+            "API_AMPLIFYPLAYGROUND_GRAPHQLAPIKEYOUTPUT": {
+              "Ref": "apiamplifyplaygroundGraphQLAPIKeyOutput"
             },
             "GITHUB_ACCESS_TOKEN": {
               "Fn::Join": [
@@ -99,7 +99,7 @@
                     "Fn::Sub": [
                       "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
                       {
-                        "appId": "d2zds8ut1avvos",
+                        "appId": "d2tp7lttvhx5h0",
                         "env": {
                           "Ref": "env"
                         },
@@ -130,12 +130,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "amplifyyarnworkspaceLambdaRoleeabff7bf",
+            "amplifyplaygroundLambdaRole3b96853a",
             {
               "Fn::Join": [
                 "",
                 [
-                  "amplifyyarnworkspaceLambdaRoleeabff7bf",
+                  "amplifyplaygroundLambdaRole3b96853a",
                   "-",
                   {
                     "Ref": "env"
@@ -241,9 +241,49 @@
                       },
                       ":apis/",
                       {
-                        "Ref": "apiamplifyyarnworkspaceGraphQLAPIIdOutput"
+                        "Ref": "apiamplifyplaygroundGraphQLAPIIdOutput"
+                      },
+                      "/types/Query/*"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:appsync:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":apis/",
+                      {
+                        "Ref": "apiamplifyplaygroundGraphQLAPIIdOutput"
                       },
                       "/types/Mutation/*"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:appsync:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":",
+                      {
+                        "Ref": "AWS::AccountId"
+                      },
+                      ":apis/",
+                      {
+                        "Ref": "apiamplifyplaygroundGraphQLAPIIdOutput"
+                      },
+                      "/types/Subscription/*"
                     ]
                   ]
                 }
@@ -288,7 +328,7 @@
                       "Fn::Sub": [
                         "/amplify/${appId}/${env}/AMPLIFY_${functionName}_",
                         {
-                          "appId": "d2zds8ut1avvos",
+                          "appId": "d2tp7lttvhx5h0",
                           "env": {
                             "Ref": "env"
                           },

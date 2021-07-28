@@ -1,8 +1,10 @@
 {
   "permissions": {
     "api": {
-      "amplifyyarnworkspace": [
-        "Mutation"
+      "amplifyplayground": [
+        "Query",
+        "Mutation",
+        "Subscription"
       ]
     }
   },
