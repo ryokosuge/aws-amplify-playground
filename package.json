@@ -1,0 +1,21 @@
+{
+  "name": "aws-amplify-playground",
+  "version": "1.0.0",
+  "author": "ryokosuge <ryo.kosuge@gmail.com>",
+  "private": true,
+  "scripts": {
+    "frontend:dev": "yarn workspace frontend dev",
+    "frontend:build": "yarn workspace frontend build",
+    "frontend:lint": "yarn workspace frontend lint",
+    "amplify:createGitHubActionWorkflowDispatch": "cd amplify/backend/function/createGitHubActionWorkflowDispatch && rm -rf src && mkdir -p src && cp package.json src/ && cd src && npm install --production && rm package.json package-lock.json && cd ../ && yarn tsc && cd ../../../../",
+    "amplify:invokePHPLambda": "cd amplify/backend/function/invokePHPLambda && rm -rf src && mkdir -p src && cp package.json src/ && cd src && npm install --production && rm package.json package-lock.json && cd ../ && yarn tsc && cd ../../../../"
+  },
+  "workspaces": [
+    "frontend"
+  ],
+  "devDependencies": {
+    "eslint": "7.31.0",
+    "eslint-config-next": "11.0.1",
+    "typescript": "4.3.5"
+  }
+}
